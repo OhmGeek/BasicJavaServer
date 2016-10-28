@@ -1,4 +1,4 @@
-package com.gcdk35;
+package com.gcdk35.Threads;
 
 import java.io.IOException;
 import java.net.ServerSocket;

@@ -8,30 +8,20 @@ package com.gcdk35;
 //    meaning that only the thread that has the lock can modify them, and all others have to wait for the lock to be removed.
 
 import java.io.IOException;
-import java.net.ServerSocket;
-import java.net.Socket;
 
 public class Main {
 
-    public static void main(String[] args)  {
-	// write your code here
+    public static void main(String[] args) {
+        // write your code here
 
-        ServerSocket socket = null;
+        Server s;
         try {
-            socket = new ServerSocket(3003);
-            Runtime.getRuntime().addShutdownHook(new CloseServerThread(socket));
-        while(true) {
-            Socket connectionSocket = socket.accept();
-            Thread t = new ServerThread(connectionSocket);
-            t.start();
-
-        }
+            s = new Server(3001);
+            s.start();
         } catch (IOException e) {
             e.printStackTrace();
+            System.out.println("An IO Exception was thrown");
         }
-
-
-
 
     }
 
