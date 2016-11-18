@@ -23,9 +23,10 @@ public class UDPServer implements IServer {
 
     public void start() {
         try {
-            byte[] buffer = new byte[1000];
-            DatagramPacket packet = new DatagramPacket(buffer,buffer.length);
+
             while (true) {
+                byte[] buffer = new byte[1000];
+                DatagramPacket packet = new DatagramPacket(buffer,buffer.length);
                 //declare variables that we need for this instance
                 String clientSentence;
                 String capitalizedSentence;
