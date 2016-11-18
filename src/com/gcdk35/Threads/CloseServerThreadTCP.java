@@ -6,10 +6,10 @@ import java.net.ServerSocket;
 /**
  * Created by ryan on 28/10/16.
  */
-public class CloseServerThread extends Thread {
+public class CloseServerThreadTCP extends Thread {
     private volatile ServerSocket server;
 
-    public CloseServerThread(ServerSocket server) {
+    public CloseServerThreadTCP(ServerSocket server) {
         this.server = server;
     }
 

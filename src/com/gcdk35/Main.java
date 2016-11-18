@@ -14,9 +14,9 @@ public class Main {
     public static void main(String[] args) {
         // write your code here
 
-        Server s;
+        IServer s;
         try {
-            s = new Server(3001);
+            s = new UDPServer(3001);
             s.start();
         } catch (IOException e) {
             e.printStackTrace();
